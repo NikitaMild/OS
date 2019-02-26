@@ -1,15 +1,5 @@
 char* const memory = (char*)0xb8000;
 unsigned temp_memory = 0;
-/*
-int hello_world() {
-	const char* string = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-  int i = 0;
-	while(*string){
-    memory[(i++)<<1] = *string++;
-  }
-  return;
-}
-*/
 
 void scroll_page(int count_scroll){
   unsigned int symbol_counter = 80*25;
@@ -40,7 +30,7 @@ void space_counter(unsigned count){
   return;
 }
 
-void print(char* string){
+void print(const char* string){
   unsigned str_len=string_length(string);
   unsigned i=0;
   unsigned count_spacer=0;
@@ -147,15 +137,15 @@ while(1);
 
 int main(){
   temp_memory = 0;
-  print("\nal\tlax\n");
-  //scroll_page(1);
+/*  print("\nal\tlax\n");
+  scroll_page(2);
   print("na nebe\tsa\tx");
   print("prav\nit");
   //scroll_page(1);
   print("vse\nmi nami");
   print("ke\tkaa\nchebure\nkaa");
   print("rabotaet!");
-  itoa(598,10);
-  //PANIC_FUNC("test panic",__FILE__,__LINE__);
+  itoa(598,10);*/
+  PANIC_FUNC("test panic",__FILE__,__LINE__);
   return 0;
 }
